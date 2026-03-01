@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+
+  color-scheme: light;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #3333fb;
+  background-image:
+    radial-gradient(at 10% 20%, hsla(228, 100%, 94%, 1) 0px, transparent 50%),
+    radial-gradient(at 90% 10%, hsla(264, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, hsla(205, 100%, 93%, 0.8) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.15);
+  color: #1d4ed8;
+}
+
+main {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 4rem !important;
+}
+
+#H1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  margin-top: 8rem;
+
+  background: linear-gradient(135deg, #1723d0e6 0%, #363535 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0f172a;
+
+  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+#P1 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.125rem, 2vw, 1.35rem);
+  color: #011311ca;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 !important;
+  line-height: 1.6;
+  font-weight: 400;
+
+  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

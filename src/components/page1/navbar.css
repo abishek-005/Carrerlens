@@ -1,0 +1,106 @@
+/* navbar.css */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.658);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    z-index: 1000;
+    box-sizing: border-box;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .navbar-fixed {
+        padding: 1rem 1.5rem;
+    }
+}
+
+.navbar-logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    position: relative;
+}
+
+.navbar-links a {
+    font-family: 'Inter', sans-serif;
+    color: #475569;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.navbar-links a:hover {
+    color: #1050e6;
+}
+
+/* Animated Underline Effect */
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #4cf7f7, #8542f8);
+    transition: width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border-radius: 2px;
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+/* Style the last link as a Premium Button */
+.navbar-links li:last-child a {
+    background: linear-gradient(135deg, #0f172a, #334155);
+    color: #ffffff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    box-shadow: 0 4px 14px 0 rgba(15, 23, 42, 0.2);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.navbar-links li:last-child a:hover {
+    background: linear-gradient(135deg, #1e293b, #475569);
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(93, 168, 219, 0.964);
+    transform: translateY(-2px);
+}
+
+.navbar-links li:last-child a::after {
+    display: none;
+}
