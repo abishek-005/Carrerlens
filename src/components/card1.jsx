@@ -2,7 +2,7 @@ import c1Image from '../assets/pp11.jpg';
 import c2Image from '../assets/pp22.png';
 import c3Image from '../assets/pp33.png';
 import c4Image from '../assets/pp44.png';
-import '../components/page1/card1.css';
+import '../components/card1.css';
 
 const cards = [{
     title: "Confused About Your Career Path?",
